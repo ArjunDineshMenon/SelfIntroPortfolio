@@ -26,6 +26,8 @@
   --spacing-sm: 0.75rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 3rem;
+  --sun-x: 80%;
+  --sun-y: 20%;
 }
 
 /* Global Reset */
@@ -61,7 +63,7 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: var(--spacing-md) var(--gutter);
   position: fixed;
   width: 100%;
@@ -73,12 +75,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-.nav__logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent-orange);
-}
+
 
 .nav__menu {
   display: flex;
@@ -113,7 +110,35 @@ body {
   width: 100%;
 }
 
-.btn {
+/* Custom Cursor */
+.cursor {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-orange);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--accent-orange);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.2s ease-out;
+}
+
   display: inline-block;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 999px;
@@ -328,23 +353,59 @@ body {
   display: flex;
   align-items: flex-end; /* silhouette sits on bottom */
   justify-content: flex-end;
-  perspective: 1000px;
+  perspective: 1000px; overflow: visible;
 }
 
 .illustration {
   width: 140%;
   height: 140%;
-  background: radial-gradient(circle at 30% 30%, var(--accent-glow) 0%, rgba(255,140,30,0) 60%);
+  position: relative;
   filter: blur(12px);
   transform: translateX(12%) translateY(6%) rotateY(-8deg);
   border-radius: 50%;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-  /* Placeholder gradient – replace with SVG/Canvas later */
+/* Sunglasses (hand‑adjustable) */
+.sunglasses {
+  position: absolute;
+  left: 50%;
+  bottom: 20px; /* initial position where hand meets glasses */
+  width: 60px;
+  height: 12px;
+  background: var(--accent-glow);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+}
+
+/* Particles */
+.particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  background: var(--accent-amber);
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(1px);
 }
 
 /* Background Effects */
 body::before {
   content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at var(--sun-x, 80%) var(--sun-y, 20%), var(--accent-orange) 0%, rgba(255,152,61,0) 65%);
+  opacity: 0.12;
+  pointer-events: none;
+  transform: translateZ(-1px);
+}
+  /* duplicate background block removed */
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at 80% 20%, var(--accent-orange) 0%, rgba(255,152,61,0) 65%);
