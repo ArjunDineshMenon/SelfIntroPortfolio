@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="1200" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Silhouette group -->
+  <g id="silhouette" fill="#0a0a0a">
+    <!-- Head (with messy hair) -->
+    <path d="M100 30 C90 20, 80 20, 70 30 C60 40, 60 50, 70 55 C80 60, 90 55, 100 60 C110 55, 120 60, 130 55 C140 50, 140 40, 130 30 C120 20, 110 20, 100 30 Z" />
+    <!-- Body (hoodie) -->
+    <path d="M70 70 L70 180 L130 180 L130 70 Z" />
+    <!-- Hood -->
+    <path d="M70 70 Q100 20 130 70" fill="#0a0a0a" />
+    <!-- Arms -->
+    <path d="M70 110 L40 150" stroke="#0a0a0a" stroke-width="22" stroke-linecap="round" />
+    <path d="M130 110 L160 150" stroke="#0a0a0a" stroke-width="22" stroke-linecap="round" />
+    <!-- One hand touching sunglasses -->
+    <path d="M70 110 L80 120" stroke="#0a0a0a" stroke-width="10" stroke-linecap="round" />
+    <!-- Legs -->
+    <path d="M70 180 L60 260" stroke="#0a0a0a" stroke-width="22" stroke-linecap="round" />
+    <path d="M130 180 L140 260" stroke="#0a0a0a" stroke-width="22" stroke-linecap="round" />
+  </g>
+  <!-- Sunglasses -->
+  <g id="sunglasses" fill="#ff8a3d" opacity="0.9">
+    <rect x="85" y="45" width="30" height="8" rx="2" />
+    <line x1="85" y1="49" x2="70" y2="60" stroke="#ff8a3d" stroke-width="4" />
+  </g>
+  <!-- Rim lighting (orange glow) -->
+  <defs>
+    <radialGradient id="rim" cx="0.5" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#ff8a3d" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="200" height="300" fill="url(#rim)" />
+</svg>

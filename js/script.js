@@ -63,7 +63,7 @@ function initMagneticButtons() {
 // ----- Parallax -----
 function initParallax() {
   const layers = [
-    { el: document.querySelector('.illustration'), depth: 15 }, // character
+    { el: document.querySelector('.hero__photo'), depth: 15 }, // hero photo
     { el: document.body, depth: 8, type: 'sun' },               // sun (background)
     { el: document.querySelector('.hero__left'), depth: 4 },   // mountains placeholder
     { el: document.querySelector('.hero__right'), depth: 2 }   // text minimal movement
@@ -109,25 +109,7 @@ function initParallax() {
   animate();
 }
 
-// ----- Sunglasses Interaction -----
-function initSunglassesInteraction() {
-  const glasses = document.querySelector('.sunglasses');
-  if (!glasses) return;
-  let targetY = 0;
-  let currentY = 0;
 
-  document.addEventListener('mousemove', (e) => {
-    const percentY = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
-    targetY = -percentY * 10; // upward max 10px when mouse moves up
-  });
-
-  function animate() {
-    currentY += (targetY - currentY) * 0.1;
-    gsap.set(glasses, { y: currentY });
-    requestAnimationFrame(animate);
-  }
-  animate();
-}
 
 // ----- DOM Ready -----
 document.addEventListener("DOMContentLoaded", () => {
@@ -136,5 +118,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initMagneticButtons();
   if (typeof createParticles === 'function') createParticles(); // particles from previous implementation
   initParallax();
-  initSunglassesInteraction();
 });
