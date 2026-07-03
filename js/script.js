@@ -2,6 +2,7 @@
 // Boots the page, initializes GSAP animations, custom cursor, magnetic hover, particles, and parallax.
 
 import { initHeroAnimations } from "./animations.js";
+import { initHeroTransition } from "./transition.js";
 
 // ----- Custom Cursor -----
 function initCustomCursor() {
@@ -62,11 +63,12 @@ function initMagneticButtons() {
 
 // ----- Parallax -----
 function initParallax() {
+  const heroEl = document.querySelector('.hero');
+  let parallaxActive = true;
+
   const layers = [
     { el: document.querySelector('.hero__photo'), depth: 15 }, // hero photo
     { el: document.body, depth: 8, type: 'sun' },               // sun (background)
-    { el: document.querySelector('.hero__left'), depth: 4 },   // mountains placeholder
-    { el: document.querySelector('.hero__right'), depth: 2 }   // text minimal movement
   ];
 
   // Store target positions per layer
@@ -88,21 +90,29 @@ function initParallax() {
     });
   });
 
-  function animate() {
-    layers.forEach((layer, i) => {
-      // lerp for smooth easing
-      current[i].x += (targets[i].x - current[i].x) * 0.1;
-      current[i].y += (targets[i].y - current[i].y) * 0.1;
+  // Disable parallax when scrolled past the hero viewport
+  window.addEventListener('scroll', () => {
+    if (!heroEl) return;
+    parallaxActive = window.scrollY < window.innerHeight * 0.5;
+  }, { passive: true });
 
-      if (layer.type === 'sun') {
-        const sunX = 50 + current[i].x;
-        const sunY = 50 + current[i].y;
-        document.documentElement.style.setProperty('--sun-x', `${sunX}%`);
-        document.documentElement.style.setProperty('--sun-y', `${sunY}%`);
-      } else if (layer.el) {
-        layer.el.style.transform = `translate(${current[i].x}px, ${current[i].y}px)`;
-      }
-    });
+  function animate() {
+    if (parallaxActive) {
+      layers.forEach((layer, i) => {
+        // lerp for smooth easing
+        current[i].x += (targets[i].x - current[i].x) * 0.1;
+        current[i].y += (targets[i].y - current[i].y) * 0.1;
+
+        if (layer.type === 'sun') {
+          const sunX = 50 + current[i].x;
+          const sunY = 50 + current[i].y;
+          document.documentElement.style.setProperty('--sun-x', `${sunX}%`);
+          document.documentElement.style.setProperty('--sun-y', `${sunY}%`);
+        } else if (layer.el) {
+          layer.el.style.transform = `translate(${current[i].x}px, ${current[i].y}px)`;
+        }
+      });
+    }
     requestAnimationFrame(animate);
   }
 
@@ -118,4 +128,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMagneticButtons();
   if (typeof createParticles === 'function') createParticles(); // particles from previous implementation
   initParallax();
+  initHeroTransition();
 });

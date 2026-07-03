@@ -441,6 +441,233 @@ body {
   filter: blur(1px);
 }
 
+/* ============================================================
+   GPU Compositing – will‑change hints for transition targets
+   ============================================================ */
+.badge,
+.hero__small-title,
+.hero__title,
+.hero__subtitle,
+.hero__desc,
+.hero__buttons,
+.hero__social,
+.hero__stats .stat,
+.hero__stats .divider,
+.hero__photo,
+.hero__photo-glow {
+  will-change: transform, opacity;
+}
+
+/* ============================================================
+   Cinematic Transition Overlays
+   ============================================================ */
+.sunset-flood {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at 72% 45%,
+    rgba(249, 115, 22, 0.9) 0%,
+    rgba(255, 138, 61, 0.6) 25%,
+    rgba(255, 193, 108, 0.3) 45%,
+    transparent 70%
+  );
+  transform-origin: 72% 45%;
+  will-change: transform, opacity;
+}
+
+.orange-flood {
+  position: absolute;
+  inset: 0;
+  z-index: 41;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    180deg,
+    #F97316 0%,
+    #FF8A3D 40%,
+    #FFC16C 100%
+  );
+  will-change: opacity;
+}
+
+.black-flood {
+  position: absolute;
+  inset: 0;
+  z-index: 42;
+  pointer-events: none;
+  opacity: 0;
+  background: var(--bg-primary);
+  will-change: opacity;
+}
+
+/* Stat dissolution particles */
+.stat-particle {
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* ============================================================
+   About Section – Premium Dark Aesthetic
+   ============================================================ */
+.about {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 8rem var(--gutter) 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Initial hidden state — animated in by ScrollTrigger */
+  opacity: 0;
+}
+
+/* Subtle gradient at the top to blend with the black-flood */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about__container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-orange);
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.about__headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 30%, var(--accent-amber) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about__text {
+  font-size: 1.05rem;
+  color: var(--color-secondary);
+  line-height: 1.8;
+}
+
+.about__text:first-child::first-letter {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  font-family: var(--font-heading);
+}
+
+.about__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about__highlight-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.06) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.about__highlight-card:hover {
+  border-color: rgba(249, 115, 22, 0.25);
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 32px rgba(249, 115, 22, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about__highlight-card:hover::before {
+  opacity: 1;
+}
+
+.about__highlight-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.about__highlight-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.about__highlight-desc {
+  font-size: 0.92rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
 /* Background Effects */
 body::before {
   content: "";
@@ -470,6 +697,10 @@ body::before {
   .hero__photo {
     transform: none;
   }
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -490,6 +721,12 @@ body::before {
   .hero__desc, .hero__subtitle {
     font-size: 1rem;
   }
+  .about {
+    padding: 5rem var(--gutter) 4rem;
+  }
+  .about__headline {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+  }
 }
 
 @media (max-width: 600px) {
@@ -508,4 +745,8 @@ body::before {
   .hero__subtitle, .hero__desc {
     font-size: 0.95rem;
   }
+  .about__highlight-card {
+    padding: 1.25rem;
+  }
 }
+

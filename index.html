@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <!-- GSAP CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
   <link rel="stylesheet" href="css/style.css?v=buttons-text-sunset-20260702" />
@@ -83,6 +84,51 @@
         <div class="hero__image-wrapper">
           <img src="assets/images/Image1.png" alt="Arjun" class="hero__photo" />
           <div class="hero__photo-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cinematic transition overlays -->
+    <div class="sunset-flood" id="sunset-flood"></div>
+    <div class="orange-flood" id="orange-flood"></div>
+    <div class="black-flood" id="black-flood"></div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about__container">
+      <span class="section-label">About Me</span>
+      <h2 class="about__headline">
+        Crafting Digital Experiences<br/>with Code &amp; Curiosity
+      </h2>
+      <div class="about__content">
+        <div class="about__text-block">
+          <p class="about__text">
+            I'm Arjun — an AI and Data Science student with a deep passion for building things that live on the internet. I specialise in crafting scalable web applications, exploring the frontiers of machine learning, and turning complex ideas into elegant, user-centric products.
+          </p>
+          <p class="about__text">
+            My journey started with curiosity and a terminal window. Today, it spans cloud architecture, DevOps pipelines, deep learning models, and full-stack applications. I believe the best software is built at the intersection of engineering precision and creative intuition.
+          </p>
+          <p class="about__text">
+            When I'm not coding, you'll find me experimenting with generative AI, contributing to open-source projects, or diving deep into research papers that push the boundaries of what's possible.
+          </p>
+        </div>
+        <div class="about__highlights">
+          <div class="about__highlight-card">
+            <span class="about__highlight-icon">🧠</span>
+            <h4 class="about__highlight-title">AI & ML</h4>
+            <p class="about__highlight-desc">Deep learning, NLP, and computer vision projects that solve real problems.</p>
+          </div>
+          <div class="about__highlight-card">
+            <span class="about__highlight-icon">☁️</span>
+            <h4 class="about__highlight-title">Cloud & DevOps</h4>
+            <p class="about__highlight-desc">Architecting scalable infrastructure with CI/CD, Docker, and cloud platforms.</p>
+          </div>
+          <div class="about__highlight-card">
+            <span class="about__highlight-icon">🎨</span>
+            <h4 class="about__highlight-title">Design Craft</h4>
+            <p class="about__highlight-desc">Pixel-perfect interfaces with cinematic animations and premium aesthetics.</p>
+          </div>
         </div>
       </div>
     </div>
