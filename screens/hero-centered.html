@@ -1,0 +1,193 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#2f1500",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-tint": "#ffb5a0",
+                        "on-tertiary-container": "#2a2a2a",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "tertiary-container": "#929090",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "inverse-primary": "#b12d00",
+                        "on-primary-fixed": "#3b0900",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-bright": "#3a3939",
+                        "primary-fixed": "#ffdbd1",
+                        "on-surface-variant": "#e7bdb2",
+                        "secondary-fixed": "#ffdcc3",
+                        "on-secondary": "#4d2600",
+                        "surface": "#131313",
+                        "secondary": "#ffb77d",
+                        "primary": "#ffb5a0",
+                        "on-primary-container": "#541100",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary-container": "#603100",
+                        "tertiary": "#c8c6c5",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#ad887e",
+                        "on-primary-fixed-variant": "#872000",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-primary": "#601400",
+                        "secondary-container": "#fd8b00",
+                        "primary-container": "#ff5625",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "on-error": "#690005",
+                        "background": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#5d4038",
+                        "on-tertiary": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "section-gap": "160px",
+                        "stack-md": "24px",
+                        "margin-edge": "64px",
+                        "container-max": "1440px",
+                        "stack-lg": "48px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-mono": ["Space Mono"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-xl-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "110%", "fontWeight": "800" }],
+                        "headline-sm": ["32px", { "lineHeight": "130%", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-mono": ["12px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "display-xl-mobile": ["56px", { "lineHeight": "110%", "fontWeight": "900" }],
+                        "display-lg": ["80px", { "lineHeight": "100%", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "display-xl": ["120px", { "lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "headline-md": ["48px", { "lineHeight": "120%", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    }catch(_e){}</script></head><body class="antialiased font-body-md text-body-md selection:bg-primary/30 selection:text-primary min-h-screen flex flex-col relative">
+<!-- Custom Cursor Element -->
+<div id="custom-cursor" class=""></div>
+<!-- Navigation Shell (TopNavBar from JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/10">
+<div class="flex justify-between items-center px-margin-edge py-stack-sm max-w-container-max mx-auto h-[80px]">
+<!-- Brand Logo -->
+<a aria-label="ARJUN Home" class="font-display-lg text-headline-sm tracking-tighter text-primary interactive-element" href="#">
+                ARJUN
+            </a>
+<!-- Desktop Nav Links -->
+<div class="hidden md:flex items-center gap-gutter h-full">
+<a aria-current="page" class="font-label-mono text-label-mono text-primary font-bold border-b border-primary pb-1 h-full flex items-center interactive-element" href="#">About</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 h-full flex items-center interactive-element" href="#">Skills</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 h-full flex items-center interactive-element" href="#">Projects</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 h-full flex items-center interactive-element" href="#">Journey</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 h-full flex items-center interactive-element" href="#">Contact</a>
+</div>
+<!-- Trailing Action -->
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 border border-primary text-primary font-label-mono text-label-mono uppercase tracking-widest hover:bg-primary hover:text-background transition-all duration-300 interactive-element" href="#">
+                Let's Talk
+            </a>
+<!-- Mobile Hamburger (Conceptual) -->
+<button aria-label="Open Menu" class="md:hidden text-primary interactive-element p-2">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center pt-[80px] relative overflow-hidden min-h-screen">
+<!-- Background Animation Layer -->
+
+<!-- Background Visuals -->
+<div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none fixed" id="hero-visual">
+<div class="sunset-glow"></div>
+<div class="absolute inset-0 w-full h-full flex items-center justify-center opacity-60 mix-blend-luminosity">
+<img alt="Background Silhouette" class="object-cover w-full h-full object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe5tei5ZBTvl4sYresg6KVHIn9-pg1m7D4R0-e1GMJkYeBVr8Oo4WB_CLLyj6TH1WVuXexTLxyNFR6mQ9SNYCKqoFbqkohpupVPs9GTwjYtQlJ9I4diTIxsf2KtS1oNOkTe0nmQyllpuTJ4pbj79RCf_SWvMEkJWx3on2RAMOMe0R0fo6cXo3HHGIQpAJA4EixIk9z10dWPzEswHcgyMKtJt3o3ODS6_Z3Xgzvpk9zBnttNAfqygMfnuQBCYTv7Uqb7Wo">
+<div class="absolute inset-0 bg-background/40"></div>
+</div>
+</div>
+<!-- Centered Content Container -->
+<div class="w-full max-w-container-max mx-auto px-5 md:px-margin-edge relative z-10 min-h-[calc(100vh-80px)] flex flex-col items-center justify-center py-section-gap">
+<div class="flex flex-col items-center justify-center space-y-stack-lg relative z-20 text-center w-full max-w-3xl" id="hero-content">
+<div class="space-y-stack-sm drop-shadow-2xl">
+<p class="font-display-lg text-headline-sm text-surface-tint italic opacity-90" style="font-weight: 400;">Hi, I'm</p>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-none tracking-tighter uppercase drop-shadow-2xl">
+                        ARJUN
+                    </h1>
+</div>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="font-label-mono text-label-mono border border-surface-variant px-4 py-2 text-tertiary tracking-widest uppercase bg-background/50 backdrop-blur-sm rounded-sm">Computer Science Student</span>
+<span class="font-label-mono text-label-mono border border-surface-variant px-4 py-2 text-tertiary tracking-widest uppercase bg-background/50 backdrop-blur-sm rounded-sm">Full Stack Developer</span>
+<span class="font-label-mono text-label-mono border border-surface-variant px-4 py-2 text-tertiary tracking-widest uppercase bg-background/50 backdrop-blur-sm rounded-sm">AI Enthusiast</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-light leading-relaxed drop-shadow-md bg-background/40 p-6 rounded-lg backdrop-blur-sm border border-outline-variant/10">
+                    Forging digital experiences at the intersection of stark minimalism and high-performance engineering. I build tools that disappear, leaving only impact.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-stack-md pt-stack-sm w-full sm:w-auto">
+<a class="inline-flex items-center justify-center px-8 py-4 border border-primary bg-background/50 backdrop-blur-sm text-primary font-label-mono text-label-mono uppercase tracking-widest hover:bg-primary hover:text-background transition-all duration-300 group interactive-element w-full sm:w-auto" href="#">
+                        Explore My Journey
+                        <span class="material-symbols-outlined ml-3 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-tertiary bg-background/20 backdrop-blur-sm font-label-mono text-label-mono uppercase tracking-widest hover:text-primary transition-all duration-300 w-full sm:w-auto interactive-element" href="#">
+                        View Projects
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<script class="">
+        // Custom Cursor Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.getElementById('custom-cursor');
+            const interactives = document.querySelectorAll('.interactive-element, a, button');
+
+            // Follow mouse
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                // Parallax effect on hero elements
+                const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+                const mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+                
+                const visual = document.getElementById('hero-visual');
+                const content = document.getElementById('hero-content');
+                
+                if(visual) visual.style.transform = `translate(${mouseX * -15}px, ${mouseY * -15}px)`;
+                if(content) content.style.transform = `translate(${mouseX * 5}px, ${mouseY * 5}px)`;
+            });
+
+            // Hover effects
+            interactives.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hovering');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove</script></body></html>
+

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE PATH | ARJUN</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;700&amp;family=Playfair+Display:wght@600;700;800;900&amp;family=Space+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#131313",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-container-low": "#1c1b1b",
+                      "on-surface": "#e5e2e1",
+                      "primary-fixed-dim": "#ffb5a0",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "background": "#131313",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "tertiary-fixed": "#e5e2e1",
+                      "secondary-fixed": "#ffdcc3",
+                      "surface": "#131313",
+                      "inverse-surface": "#e5e2e1",
+                      "secondary-container": "#fd8b00",
+                      "outline-variant": "#5d4038",
+                      "outline": "#ad887e",
+                      "surface-bright": "#3a3939",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "surface-container-highest": "#353534",
+                      "on-error-container": "#ffdad6",
+                      "error": "#ffb4ab",
+                      "inverse-on-surface": "#313030",
+                      "on-primary-fixed-variant": "#872000",
+                      "tertiary": "#c8c6c5",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "on-primary-container": "#541100",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-secondary": "#4d2600",
+                      "on-background": "#e5e2e1",
+                      "on-tertiary-container": "#2a2a2a",
+                      "primary-container": "#ff5625",
+                      "primary-fixed": "#ffdbd1",
+                      "surface-variant": "#353534",
+                      "surface-container": "#201f1f",
+                      "inverse-primary": "#b12d00",
+                      "on-tertiary": "#313030",
+                      "surface-tint": "#ffb5a0",
+                      "primary": "#ffb5a0",
+                      "on-secondary-fixed": "#2f1500",
+                      "on-surface-variant": "#e7bdb2",
+                      "on-primary": "#601400",
+                      "tertiary-container": "#929090",
+                      "on-primary-fixed": "#3b0900",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#603100",
+                      "secondary": "#ffb77d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "48px",
+                      "section-gap": "160px",
+                      "stack-sm": "8px",
+                      "stack-md": "24px",
+                      "gutter": "32px",
+                      "container-max": "1440px",
+                      "margin-edge": "64px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "display-xl-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-mono": [
+                              "Space Mono"
+                      ],
+                      "display-xl": [
+                              "Playfair Display"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-md": [
+                              "48px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "56px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-sm": [
+                              "32px",
+                              {
+                                      "lineHeight": "130%",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            cursor: none; /* Custom cursor */
+        }
+        
+        .glow-spine {
+            box-shadow: 0 0 20px 2px rgba(255, 69, 0, 0.4);
+        }
+
+        .milestone-item {
+            opacity: 0.3;
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(40px);
+        }
+
+        .milestone-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .milestone-item.active .milestone-year {
+            text-shadow: 0 0 30px rgba(255, 69, 0, 0.5);
+            color: #ff5625;
+        }
+
+        .milestone-item.active .milestone-dot {
+            background-color: #ff5625;
+            box-shadow: 0 0 15px 5px rgba(255, 86, 37, 0.6);
+            transform: scale(1.5);
+        }
+        
+        .milestone-dot {
+            transition: all 0.5s ease;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 86, 37, 0.05) 0%, transparent 60%);
+        }
+
+        /* Custom Cursor */
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ff5625;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 86, 37, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        
+        a:hover ~ .cursor-outline,
+        button:hover ~ .cursor-outline {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 86, 37, 0.1);
+        }
+        
+        .ghost-button {
+            border: 1px solid #ffb5a0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .ghost-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #ffb5a0;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        .ghost-button:hover::before {
+            left: 0;
+        }
+        .ghost-button:hover {
+            color: #080808;
+            border-color: #ffb5a0;
+        }
+
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative selection:bg-primary selection:text-on-primary">
+<div class="particles"></div>
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-outline" id="cursor-outline"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl no-border bg-transparent">
+<div class="flex justify-between items-center w-full px-5 md:px-margin-edge py-8 max-w-container-max mx-auto">
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-primary" href="#">
+                ARJUN
+            </a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500" href="#">Skills</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500" href="#">Projects</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b border-primary/30 pb-1" href="#">Journey</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500" href="#">Contact</a>
+</div>
+<div class="hidden md:block">
+<button class="ghost-button px-6 py-3 font-label-mono text-label-mono text-primary rounded-none uppercase tracking-widest">
+                    Hire Me
+                </button>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-32 pb-section-gap px-5 md:px-margin-edge max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<header class="min-h-[512px] flex flex-col justify-center items-start mb-section-gap relative">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-stack-md leading-none">
+                THE<br/><span class="text-primary italic">PATH.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl md:ml-24">
+                A chronological exploration of technical evolution. From the first lines of code to engineering complex digital ecosystems in the void.
+            </p>
+</header>
+<!-- Timeline Section -->
+<section class="relative w-full mx-auto md:w-3/4 lg:w-2/3">
+<!-- The Spine -->
+<div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-surface-container-highest transform md:-translate-x-1/2 z-0">
+<div class="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-primary-container to-transparent glow-spine"></div>
+</div>
+<div class="relative z-10 flex flex-col gap-section-gap py-stack-lg">
+<!-- Milestone 2022 -->
+<div class="milestone-item flex flex-col md:flex-row items-start md:items-center w-full relative">
+<!-- Mobile Spine Dot -->
+<div class="md:hidden absolute left-8 top-6 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 milestone-dot"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 text-left md:text-right">
+<div class="font-headline-md text-headline-md text-surface-bright milestone-year font-bold">2022</div>
+</div>
+<!-- Desktop Spine Dot -->
+<div class="hidden md:block absolute left-1/2 top-1/2 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 -translate-y-1/2 milestone-dot z-20"></div>
+<div class="w-full md:w-1/2 pl-16 pt-2 md:pt-0 text-left">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Started programming.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The initial descent into the terminal. Grasping the fundamentals of logic, syntax, and algorithmic thinking in a purely text-based environment.</p>
+<div class="mt-4 flex gap-2">
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">C++</span>
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">Python</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2023 -->
+<div class="milestone-item flex flex-col md:flex-row-reverse items-start md:items-center w-full relative">
+<!-- Mobile Spine Dot -->
+<div class="md:hidden absolute left-8 top-6 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 milestone-dot"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-0 md:pl-16 text-left">
+<div class="font-headline-md text-headline-md text-surface-bright milestone-year font-bold">2023</div>
+</div>
+<!-- Desktop Spine Dot -->
+<div class="hidden md:block absolute left-1/2 top-1/2 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 -translate-y-1/2 milestone-dot z-20"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 pt-2 md:pt-0 text-left md:text-right">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Built my first web applications.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Transitioning from terminal scripts to graphical interfaces. Understanding the DOM, styling paradigms, and asynchronous data fetching.</p>
+<div class="mt-4 flex gap-2 md:justify-end">
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">HTML/CSS</span>
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">JS</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2024 -->
+<div class="milestone-item flex flex-col md:flex-row items-start md:items-center w-full relative">
+<!-- Mobile Spine Dot -->
+<div class="md:hidden absolute left-8 top-6 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 milestone-dot"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 text-left md:text-right">
+<div class="font-headline-md text-headline-md text-surface-bright milestone-year font-bold">2024</div>
+</div>
+<!-- Desktop Spine Dot -->
+<div class="hidden md:block absolute left-1/2 top-1/2 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 -translate-y-1/2 milestone-dot z-20"></div>
+<div class="w-full md:w-1/2 pl-16 pt-2 md:pt-0 text-left">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Explored Full Stack Development.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Connecting the interface to the underlying architecture. Architecting databases, designing RESTful APIs, and managing state across complex applications.</p>
+<div class="mt-4 flex gap-2 flex-wrap">
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">React</span>
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">Node.js</span>
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">MongoDB</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2025 -->
+<div class="milestone-item flex flex-col md:flex-row-reverse items-start md:items-center w-full relative">
+<!-- Mobile Spine Dot -->
+<div class="md:hidden absolute left-8 top-6 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 milestone-dot"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-0 md:pl-16 text-left">
+<div class="font-headline-md text-headline-md text-surface-bright milestone-year font-bold">2025</div>
+</div>
+<!-- Desktop Spine Dot -->
+<div class="hidden md:block absolute left-1/2 top-1/2 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 -translate-y-1/2 milestone-dot z-20"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 pt-2 md:pt-0 text-left md:text-right">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Cloud, AI, &amp; Modern Tech.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Scaling infrastructure and integrating intelligence. Deploying serverless architectures and leveraging machine learning models within web ecosystems.</p>
+<div class="mt-4 flex gap-2 md:justify-end flex-wrap">
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">AWS</span>
+<span class="border border-outline-variant px-3 py-1 font-label-mono text-label-mono text-on-surface-variant">OpenAI API</span>
+</div>
+</div>
+</div>
+<!-- Milestone Present -->
+<div class="milestone-item flex flex-col md:flex-row items-start md:items-center w-full relative">
+<!-- Mobile Spine Dot -->
+<div class="md:hidden absolute left-8 top-6 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 milestone-dot"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-0 md:pr-16 text-left md:text-right">
+<div class="font-headline-md text-headline-md text-surface-bright milestone-year font-bold">PRESENT</div>
+</div>
+<!-- Desktop Spine Dot -->
+<div class="hidden md:block absolute left-1/2 top-1/2 w-3 h-3 rounded-full bg-surface-bright transform -translate-x-1/2 -translate-y-1/2 milestone-dot z-20"></div>
+<div class="w-full md:w-1/2 pl-16 pt-2 md:pt-0 text-left">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Building meaningful experiences.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Synthesizing design and technology to create cinematic, high-performance digital environments for high-ticket clients.</p>
+<div class="mt-4 flex gap-2 flex-wrap">
+<span class="border border-primary/50 px-3 py-1 font-label-mono text-label-mono text-primary shadow-[0_0_10px_rgba(255,86,37,0.2)]">Creative Coding</span>
+<span class="border border-primary/50 px-3 py-1 font-label-mono text-label-mono text-primary shadow-[0_0_10px_rgba(255,86,37,0.2)]">WebGL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex justify-center mt-section-gap">
+<button class="ghost-button px-8 py-4 font-label-mono text-label-mono text-primary rounded-none uppercase tracking-widest text-lg">
+                View Projects
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant/10 bg-background mt-auto z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-5 md:px-margin-edge w-full max-w-container-max mx-auto gap-stack-md md:gap-0">
+<div class="font-display-lg text-primary text-display-lg-mobile md:text-display-lg">
+                ARJUN
+            </div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">
+                © 2024 ARJUN. BUILT IN THE VOID.
+            </div>
+<div class="flex gap-stack-md">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary hover:tracking-widest transition-all duration-700" href="#">Github</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary hover:tracking-widest transition-all duration-700" href="#">LinkedIn</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary hover:tracking-widest transition-all duration-700" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            
+            // Slight delay for the outline for a smooth effect
+            setTimeout(() => {
+                cursorOutline.style.left = `${posX}px`;
+                cursorOutline.style.top = `${posY}px`;
+            }, 50);
+        });
+
+        // Intersection Observer for Milestones
+        const milestones = document.querySelectorAll('.milestone-item');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -20% 0px', // Trigger slightly before it hits the bottom
+            threshold: 0.1
+        };
+
+        const milestoneObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        milestones.forEach(milestone => {
+            milestoneObserver.observe(milestone);
+        });
+        
+        // Initial check in case some are already in view on load
+        setTimeout(() => {
+            milestones.forEach(milestone => {
+                const rect = milestone.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    milestone.classList.add('active');
+                }
+            });
+        }, 100);
+    </script>
+</body></html>
+

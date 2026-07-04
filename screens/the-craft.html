@@ -1,0 +1,608 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Craft</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&amp;family=Hanken+Grotesk:wght@300;400&amp;family=Space+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#131313",
+                      "on-background": "#e5e2e1",
+                      "surface-container": "#201f1f",
+                      "on-surface": "#e5e2e1",
+                      "secondary-fixed": "#ffdcc3",
+                      "surface-container-lowest": "#0e0e0e",
+                      "inverse-primary": "#b12d00",
+                      "primary-container": "#ff5625",
+                      "primary-fixed": "#ffdbd1",
+                      "on-primary-fixed": "#3b0900",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-primary-fixed-variant": "#872000",
+                      "surface-tint": "#ffb5a0",
+                      "inverse-on-surface": "#313030",
+                      "outline": "#ad887e",
+                      "on-error": "#690005",
+                      "background": "#131313",
+                      "primary": "#ffb5a0",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "on-secondary-fixed": "#2f1500",
+                      "error": "#ffb4ab",
+                      "primary-fixed-dim": "#ffb5a0",
+                      "on-secondary": "#4d2600",
+                      "tertiary-fixed": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "surface-variant": "#353534",
+                      "on-tertiary-container": "#2a2a2a",
+                      "on-surface-variant": "#e7bdb2",
+                      "outline-variant": "#5d4038",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "surface-container-highest": "#353534",
+                      "surface-bright": "#3a3939",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#603100",
+                      "on-tertiary": "#313030",
+                      "on-primary": "#601400",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-dim": "#131313",
+                      "secondary": "#ffb77d",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-low": "#1c1b1b",
+                      "tertiary": "#c8c6c5",
+                      "on-primary-container": "#541100",
+                      "secondary-container": "#fd8b00",
+                      "tertiary-container": "#929090"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "stack-lg": "48px",
+                      "stack-sm": "8px",
+                      "gutter": "32px",
+                      "container-max": "1440px",
+                      "section-gap": "160px",
+                      "margin-edge": "64px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "display-xl": [
+                              "Playfair Display"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "display-xl-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "label-mono": [
+                              "Space Mono"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "32px",
+                              {
+                                      "lineHeight": "130%",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110%",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "56px",
+                              {
+                                      "lineHeight": "110%",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "headline-md": [
+                              "48px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 181, 160, 0.3);
+        }
+
+        .skill-item {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            color: #ffb5a0;
+            text-shadow: 0 0 10px rgba(255, 181, 160, 0.5);
+        }
+
+        .skill-tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            background-color: #1a1a1a;
+            border: 1px solid rgba(255, 181, 160, 0.1);
+            padding: 16px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .skill-item:hover .skill-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: 150%;
+        }
+        
+        .bg-sunset-glow {
+            background: radial-gradient(circle at center, rgba(255, 86, 37, 0.05) 0%, transparent 60%);
+        }
+        
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ffb5a0;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+            transform: translate(-50%, -50%);
+        }
+        .cursor-dot.active {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid #ffb5a0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary selection:text-on-primary">
+<div class="cursor-dot" id="cursor-dot" style="left: 699px; top: 1330px;"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl no-border bg-transparent flat no shadows hidden md:flex">
+<div class="flex justify-between items-center w-full px-margin-edge py-8 max-w-container-max mx-auto relative">
+
+<nav class="hidden md:flex gap-gutter items-center absolute left-1/2 -translate-x-1/2 md:absolute md:left-1/2 md:-translate-x-1/2" style="transform: translate(calc(-50% - 5vh), 0px);">
+<a class="text-on-surface-variant hover:text-primary transition-all duration-500 font-label-mono text-label-mono uppercase" href="#">About</a>
+<a class="text-primary font-bold border-b border-primary/30 hover:text-primary transition-all duration-500 font-label-mono text-label-mono uppercase Active: opacity-70 transition-opacity" href="#">Skills</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-500 font-label-mono text-label-mono uppercase" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-500 font-label-mono text-label-mono uppercase" href="#">Journey</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-500 font-label-mono text-label-mono uppercase" href="#">Contact</a>
+</nav>
+
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</header>
+<!-- Mobile Header -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl md:hidden px-5 py-6 flex justify-between items-center">
+<a class="font-display-lg-mobile text-display-lg-mobile tracking-tighter text-primary" href="#">ARJUN</a>
+<button class="text-primary interactive-element">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow relative flex flex-col items-center justify-center min-h-screen pt-32 pb-section-gap px-5 md:px-margin-edge overflow-hidden fade-in bg-sunset-glow">
+<!-- Background Animation -->
+<div class="absolute inset-0 z-0 opacity-40 pointer-events-none mix-blend-screen">
+<!-- STITCH_THREEJS_START:ANIMATION_17 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_17" style="width:100%;height:100%"><canvas width="1280" height="1232" style="display: block; width: 1280px; height: 1232px;"></canvas></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_17');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Skill Constellation Scene
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+camera.position.z = 100;
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Skill Data
+const skillGroups = [
+  { name: 'Languages', skills: ['Python', 'Java', 'C', 'JavaScript', 'TypeScript'], color: 0xff4500, pos: new THREE.Vector3(-40, 20, 0) },
+  { name: 'Frontend', skills: ['HTML', 'CSS', 'React', 'Next.js'], color: 0xff4500, pos: new THREE.Vector3(40, 25, 0) },
+  { name: 'Backend', skills: ['Node.js', 'Express', 'REST APIs'], color: 0xff4500, pos: new THREE.Vector3(-30, -20, 0) },
+  { name: 'Database', skills: ['MySQL', 'MongoDB', 'PostgreSQL'], color: 0xff4500, pos: new THREE.Vector3(30, -15, 0) },
+  { name: 'Cloud & DevOps', skills: ['AWS', 'Docker', 'Git', 'Linux'], color: 0xff4500, pos: new THREE.Vector3(0, 40, 0) },
+  { name: 'AI', skills: ['Machine Learning', 'LLMs', 'Prompt Engineering'], color: 0xff4500, pos: new THREE.Vector3(0, -40, 0) }
+];
+
+const nodes = [];
+const lines = [];
+const particleGroup = new THREE.Group();
+scene.add(particleGroup);
+
+const nodeGeometry = new THREE.SphereGeometry(1.2, 16, 16);
+const lineMaterial = new THREE.LineBasicMaterial({ color: 0xff4500, transparent: true, opacity: 0.3 });
+
+// Create Constellation
+skillGroups.forEach((group, gIdx) => {
+  // Group central node
+  const groupMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+  const groupNode = new THREE.Mesh(nodeGeometry, groupMaterial);
+  groupNode.position.copy(group.pos);
+  particleGroup.add(groupNode);
+  nodes.push(groupNode);
+
+  group.skills.forEach((skill, sIdx) => {
+    const skillMaterial = new THREE.MeshBasicMaterial({ color: 0xff4500 });
+    const skillNode = new THREE.Mesh(nodeGeometry, skillMaterial);
+    
+    // Position skill nodes around group center
+    const angle = (sIdx / group.skills.length) * Math.PI * 2;
+    const radius = 15;
+    skillNode.position.set(
+      group.pos.x + Math.cos(angle) * radius,
+      group.pos.y + Math.sin(angle) * radius,
+      group.pos.z + (Math.random() - 0.5) * 10
+    );
+    
+    particleGroup.add(skillNode);
+    nodes.push(skillNode);
+
+    // Connection line
+    const points = [group.pos, skillNode.position];
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+    const line = new THREE.Line(geometry, lineMaterial);
+    particleGroup.add(line);
+  });
+});
+
+// Ambient Particles
+const starsGeometry = new THREE.BufferGeometry();
+const starsCount = 400;
+const posArray = new Float32Array(starsCount * 3);
+for(let i=0; i < starsCount * 3; i++) {
+  posArray[i] = (Math.random() - 0.5) * 300;
+}
+starsGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const starsMaterial = new THREE.PointsMaterial({ size: 0.5, color: 0xffffff, transparent: true, opacity: 0.5 });
+const starField = new THREE.Points(starsGeometry, starsMaterial);
+scene.add(starField);
+
+// Animation
+function animate() {
+  requestAnimationFrame(animate);
+  particleGroup.rotation.y += 0.002;
+  particleGroup.rotation.x += 0.001;
+  starField.rotation.y -= 0.0005;
+  renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_17 -->
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto text-center mt-section-gap">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-background tracking-tighter glow-text mb-24 opacity-90">THE CRAFT</h1>
+<div class="flex flex-col md:flex-row flex-wrap justify-center gap-x-32 gap-y-24 mt-24">
+<!-- Category: Languages -->
+<div class="flex flex-col items-center gap-6">
+<h3 class="font-label-mono text-label-mono text-primary/70 uppercase tracking-widest border border-outline/30 px-4 py-2">Languages</h3>
+<ul class="flex flex-col items-center gap-4">
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Python
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">PYTHON</span>
+<span class="font-body-md text-sm text-on-background">Extensive experience in data processing, automation, and backend development using Django and Flask.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Java
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">JAVA</span>
+<span class="font-body-md text-sm text-on-background">Enterprise-grade application development, focusing on robust backend architectures and spring boot.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            JavaScript
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">JAVASCRIPT</span>
+<span class="font-body-md text-sm text-on-background">Core language for interactive web development, DOM manipulation, and modern frameworks.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            TypeScript
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">TYPESCRIPT</span>
+<span class="font-body-md text-sm text-on-background">Typed superset of JavaScript ensuring code reliability and maintainability in large scale apps.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Category: Frontend -->
+<div class="flex flex-col items-center gap-6 mt-16 md:mt-0">
+<h3 class="font-label-mono text-label-mono text-primary/70 uppercase tracking-widest border border-outline/30 px-4 py-2">Frontend</h3>
+<ul class="flex flex-col items-center gap-4">
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            React
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">REACT</span>
+<span class="font-body-md text-sm text-on-background">Building complex, component-driven user interfaces with state management and hooks.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Next.js
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">NEXT.JS</span>
+<span class="font-body-md text-sm text-on-background">Server-side rendering, static site generation, and full-stack React applications for optimal performance.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            HTML/CSS
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">HTML &amp; CSS</span>
+<span class="font-body-md text-sm text-on-background">Semantic markup and advanced styling including Flexbox, Grid, and modern CSS architectures.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Category: Backend -->
+<div class="flex flex-col items-center gap-6 mt-16 md:mt-12">
+<h3 class="font-label-mono text-label-mono text-primary/70 uppercase tracking-widest border border-outline/30 px-4 py-2">Backend</h3>
+<ul class="flex flex-col items-center gap-4">
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Node.js
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">NODE.JS</span>
+<span class="font-body-md text-sm text-on-background">Asynchronous event-driven JavaScript runtime for scalable network applications.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Express
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">EXPRESS</span>
+<span class="font-body-md text-sm text-on-background">Minimalist web framework for Node.js, essential for robust API development.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            REST APIs
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">REST APIs</span>
+<span class="font-body-md text-sm text-on-background">Designing predictable, resource-oriented APIs with standard HTTP methods.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Category: Database -->
+<div class="flex flex-col items-center gap-6 mt-16 md:mt-24">
+<h3 class="font-label-mono text-label-mono text-primary/70 uppercase tracking-widest border border-outline/30 px-4 py-2">Database</h3>
+<ul class="flex flex-col items-center gap-4">
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            PostgreSQL
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">POSTGRESQL</span>
+<span class="font-body-md text-sm text-on-background">Advanced, enterprise-class open-source relational database management system.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            MongoDB
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">MONGODB</span>
+<span class="font-body-md text-sm text-on-background">Document-based NoSQL database for high volume data storage and flexible schemas.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            MySQL
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">MYSQL</span>
+<span class="font-body-md text-sm text-on-background">Reliable and widely used open-source relational database management system.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Category: Cloud & DevOps -->
+<div class="flex flex-col items-center gap-6 mt-16 md:mt-12">
+<h3 class="font-label-mono text-label-mono text-primary/70 uppercase tracking-widest border border-outline/30 px-4 py-2">Cloud &amp; DevOps</h3>
+<ul class="flex flex-col items-center gap-4">
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            AWS
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">AWS</span>
+<span class="font-body-md text-sm text-on-background">Amazon Web Services infrastructure, including EC2, S3, RDS, and Lambda deployment.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Docker
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">DOCKER</span>
+<span class="font-body-md text-sm text-on-background">Containerization for consistent environment deployment and scalable microservices.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Git &amp; Linux
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">GIT &amp; LINUX</span>
+<span class="font-body-md text-sm text-on-background">Version control mastery and comfortable navigation in Unix-based server environments.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Category: AI -->
+<div class="flex flex-col items-center gap-6 mt-16 md:mt-0">
+<h3 class="font-label-mono text-label-mono text-primary/70 uppercase tracking-widest border border-outline/30 px-4 py-2">AI &amp; ML</h3>
+<ul class="flex flex-col items-center gap-4">
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Machine Learning
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">MACHINE LEARNING</span>
+<span class="font-body-md text-sm text-on-background">Implementing predictive models and data analysis pipelines using Scikit-Learn and TensorFlow.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            LLMs
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">LLMs</span>
+<span class="font-body-md text-sm text-on-background">Integration and fine-tuning of Large Language Models for intelligent application features.</span>
+</div>
+</li>
+<li class="skill-item interactive-element font-body-lg text-body-lg text-on-surface-variant">
+                            Prompt Engineering
+                            <div class="skill-tooltip text-left">
+<span class="font-label-mono text-primary block mb-2">PROMPT ENGINEERING</span>
+<span class="font-body-md text-sm text-on-background">Designing structured inputs to elicit precise and optimal responses from AI models.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background w-full py-stack-lg border-t border-outline-variant/10 flat no shadows z-10 relative">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-edge w-full max-w-container-max mx-auto gap-8">
+
+<div class="font-label-mono text-label-mono text-on-surface-variant">
+                © 2024 ARJUN. BUILT IN THE VOID.
+            </div>
+<div class="flex gap-6">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary transition-colors uppercase Hover: tracking-widest transition-all duration-700 interactive-element" href="#">Github</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary transition-colors uppercase Hover: tracking-widest transition-all duration-700 interactive-element" href="#">LinkedIn</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary transition-colors uppercase Hover: tracking-widest transition-all duration-700 interactive-element" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursorDot = document.getElementById('cursor-dot');
+        const interactiveElements = document.querySelectorAll('.interactive-element, a, button');
+
+        document.addEventListener('mousemove', (e) => {
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+        });
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorDot.classList.add('active');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('active');
+            });
+        });
+    </script>
+
+
+</body></html>
+

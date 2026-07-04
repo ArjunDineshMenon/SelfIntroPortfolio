@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - ARJUN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400&amp;family=Playfair+Display:wght@600;700;800;900&amp;family=Space+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffdbd1",
+                        "on-tertiary-container": "#2a2a2a",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#872000",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#313030",
+                        "on-secondary": "#4d2600",
+                        "surface-tint": "#ffb5a0",
+                        "on-secondary-container": "#603100",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-highest": "#353534",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "primary": "#ffb5a0",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdcc3",
+                        "inverse-primary": "#b12d00",
+                        "primary-container": "#ff5625",
+                        "error-container": "#93000a",
+                        "secondary-container": "#fd8b00",
+                        "secondary": "#ffb77d",
+                        "on-primary-fixed": "#3b0900",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#2f1500",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#541100",
+                        "tertiary": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#5d4038",
+                        "tertiary-container": "#929090",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-surface-variant": "#e7bdb2",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#601400",
+                        "outline": "#ad887e",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-md": "24px",
+                        "container-max": "1440px",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                        "gutter": "32px",
+                        "margin-edge": "64px",
+                        "section-gap": "160px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-mono": ["Space Mono"],
+                        "display-xl-mobile": ["Playfair Display"],
+                        "display-xl": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "display-lg": ["80px", { lineHeight: "100%", letterSpacing: "-0.03em", fontWeight: "800" }],
+                        "headline-md": ["48px", { lineHeight: "120%", fontWeight: "700" }],
+                        "display-lg-mobile": ["40px", { lineHeight: "110%", fontWeight: "800" }],
+                        "headline-sm": ["32px", { lineHeight: "130%", fontWeight: "600" }],
+                        "label-mono": ["12px", { lineHeight: "100%", letterSpacing: "0.1em", fontWeight: "400" }],
+                        "display-xl-mobile": ["56px", { lineHeight: "110%", fontWeight: "900" }],
+                        "display-xl": ["120px", { lineHeight: "110%", letterSpacing: "-0.04em", fontWeight: "900" }],
+                        "body-md": ["16px", { lineHeight: "160%", fontWeight: "400" }],
+                        "body-lg": ["20px", { lineHeight: "160%", letterSpacing: "0.01em", fontWeight: "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            cursor: none;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        body::-webkit-scrollbar {
+            display: none; /* WebKit */
+        }
+        
+        /* Custom Cursor */
+        #cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background-color: theme('colors.primary');
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border 0.3s;
+        }
+        #cursor-dot.hover-state {
+            width: 48px;
+            height: 48px;
+            background-color: transparent;
+            border: 1px solid theme('colors.primary');
+        }
+
+        /* Ambient Glow & Beam */
+        .ambient-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 181, 160, 0.05) 0%, transparent 60%);
+        }
+        .vertical-beam {
+            background: linear-gradient(to bottom, transparent, theme('colors.primary'), transparent);
+            box-shadow: 0 0 30px 2px rgba(255, 181, 160, 0.4);
+            animation: pulse-beam 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-beam {
+            0% { opacity: 0.5; height: 30vh; box-shadow: 0 0 20px 1px rgba(255, 181, 160, 0.2); }
+            100% { opacity: 1; height: 50vh; box-shadow: 0 0 40px 3px rgba(255, 181, 160, 0.6); }
+        }
+
+        /* Glitch/Entrance text effect */
+        .reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+        }
+
+        @keyframes revealUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col relative overflow-hidden">
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<!-- Atmospheric Backgrounds -->
+<div class="absolute inset-0 ambient-glow z-0 pointer-events-none"></div>
+<canvas class="absolute inset-0 z-0 pointer-events-none" id="ember-canvas"></canvas>
+<!-- Vertical Beam -->
+<div class="absolute left-1/2 top-0 w-[1px] -ml-[0.5px] vertical-beam z-0 pointer-events-none"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface-dim/80 backdrop-blur-xl no-border bg-transparent flat no shadows z-50">
+<nav class="flex justify-between items-center px-margin-edge py-stack-md max-w-container-max mx-auto w-full">
+<a class="font-display-lg-mobile text-display-lg-mobile font-black text-primary tracking-tighter interactive-element" href="#">ARJUN</a>
+<ul class="hidden md:flex gap-gutter items-center">
+<li><a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 interactive-element" href="#">Work</a></li>
+<li><a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 interactive-element" href="#">Expertise</a></li>
+<li><a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 interactive-element" href="#">About</a></li>
+<li><a class="font-body-md text-body-md uppercase tracking-widest text-primary font-bold border-b border-primary pb-1 interactive-element" href="#">Contact</a></li>
+</ul>
+<a class="hidden md:inline-block font-body-md text-body-md uppercase tracking-widest text-primary border border-primary px-8 py-3 hover:bg-primary hover:text-on-primary transition-all duration-300 interactive-element" href="#">Hire Me</a>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center relative z-10 px-margin-edge w-full max-w-container-max mx-auto mt-section-gap mb-section-gap">
+<div class="text-center max-w-4xl mx-auto flex flex-col items-center gap-stack-lg">
+<div class="space-y-stack-sm reveal-text">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-[0.2em] block mb-4">Location: India</span>
+<h1 class="font-display-xl text-display-xl text-on-surface tracking-tighter">LET'S BUILD <br/><span class="text-primary italic font-light">SOMETHING.</span></h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl reveal-text" style="animation-delay: 0.5s;">
+                "Whether it's a project, an opportunity or simply a conversation, I'd love to hear from you."
+            </p>
+<div class="flex flex-col sm:flex-row gap-stack-md mt-stack-md reveal-text" style="animation-delay: 0.7s;">
+<a class="interactive-element group relative px-10 py-5 border border-primary text-primary font-label-mono text-label-mono uppercase tracking-[0.1em] overflow-hidden transition-all duration-500 hover:text-on-primary" href="#">
+<span class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-0"></span>
+<span class="relative z-10 flex items-center gap-2">Email Me <span class="material-symbols-outlined text-[16px]">arrow_outward</span></span>
+</a>
+<a class="interactive-element group px-10 py-5 border border-outline-variant/30 text-on-surface font-label-mono text-label-mono uppercase tracking-[0.1em] transition-all duration-500 hover:border-primary hover:text-primary" href="#">
+<span class="relative z-10 flex items-center gap-2">Download Resume <span class="material-symbols-outlined text-[16px]">download</span></span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant/10 flat bg-surface-dim z-10 relative mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-edge gap-stack-md max-w-container-max mx-auto w-full">
+<a class="font-display-sm text-headline-sm text-primary interactive-element" href="#">ARJUN</a>
+<ul class="flex gap-stack-md">
+<li><a class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:translate-y-[-2px] transition-transform interactive-element block" href="#">Github</a></li>
+<li><a class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:translate-y-[-2px] transition-transform interactive-element block" href="#">LinkedIn</a></li>
+<li><a class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:translate-y-[-2px] transition-transform interactive-element block" href="#">Mail</a></li>
+</ul>
+<p class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-on-surface-variant">© 2024 ARJUN. ALL RIGHTS RESERVED. MADE IN INDIA.</p>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        // Custom Cursor Logic
+        const cursorDot = document.getElementById('cursor-dot');
+        const interactiveElements = document.querySelectorAll('.interactive-element');
+
+        window.addEventListener('mousemove', (e) => {
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+        });
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursorDot.classList.add('hover-state'));
+            el.addEventListener('mouseleave', () => cursorDot.classList.remove('hover-state'));
+        });
+
+        // Floating Embers (Particles) Logic
+        const canvas = document.getElementById('ember-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.reset();
+                this.y = Math.random() * canvas.height; // Initial random spawn
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height + Math.random() * 100;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedY = Math.random() * -0.5 - 0.2;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.life = Math.random() * 0.5 + 0.2; // Opacity modifier
+                // Using primary color for embers: #ffb5a0
+                this.color = `rgba(255, 181, 160, ${this.life})`;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Wavering effect
+                this.speedX += (Math.random() - 0.5) * 0.05;
+
+                if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                
+                // Glow
+                ctx.shadowBlur = 5;
+                ctx.shadowColor = '#ffb5a0';
+            }
+        }
+
+        for (let i = 0; i < 40; i++) {
+            particles.push(new Particle());
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+    </script>
+</body></html>
+

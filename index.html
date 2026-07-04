@@ -1,140 +1,450 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arjun • Front‑End Engineer & Creator</title>
-  <meta name="description" content="Arjun’s premium portfolio – a cinematic showcase of full‑stack projects, AI experiments, and design craftsmanship." />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- GSAP CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-  <link rel="stylesheet" href="css/style.css?v=buttons-text-sunset-20260702" />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ARJUN — Cinematic Developer Portfolio</title>
+    <meta name="description" content="Arjun's cinematic developer portfolio. Full-stack developer, AI enthusiast, and computer science student building in the void.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400&family=Playfair+Display:wght@600;700;800;900&family=Space+Mono:wght@400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #ffb5a0 #131313;
+        }
+
+        html::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: #131313;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: #ffb5a0;
+            border-radius: 3px;
+        }
+
+        body {
+            background-color: #080808;
+            color: #e5e2e1;
+            font-family: 'Hanken Grotesk', sans-serif;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Custom Cursor */
+        #custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background-color: #ffb5a0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+            mix-blend-mode: difference;
+        }
+
+        #custom-cursor.hovering {
+            width: 48px;
+            height: 48px;
+            background-color: transparent;
+            border: 1px solid #ffb5a0;
+            mix-blend-mode: normal;
+        }
+
+        /* Fixed Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(93, 64, 56, 0.15);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-bar.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 64px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: #ffb5a0;
+            text-decoration: none;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(231, 189, 178, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 4px 0;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ffb5a0;
+        }
+
+        .nav-links a.active {
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255, 181, 160, 0.4);
+        }
+
+        .nav-cta {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffb5a0;
+            text-decoration: none;
+            border: 1px solid #ffb5a0;
+            padding: 10px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: #ffb5a0;
+            color: #080808;
+        }
+
+        /* Section iframes */
+        .section-frame {
+            width: 100%;
+            border: none;
+            display: block;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        /* Section divider */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 181, 160, 0.15), transparent);
+        }
+
+        /* Loading overlay */
+        .loading-overlay {
+            position: fixed;
+            inset: 0;
+            background: #080808;
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .loading-overlay.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: #ffb5a0;
+            letter-spacing: -0.03em;
+        }
+
+        .loading-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(255, 181, 160, 0.1);
+            border-radius: 1px;
+            overflow: hidden;
+        }
+
+        .loading-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: #ffb5a0;
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        /* Mobile nav */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffb5a0;
+            cursor: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-inner {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-
-    <ul class="nav__menu">
-      <li><a href="#hero" class="nav__link">Home</a></li>
-      <li><a href="#about" class="nav__link">About</a></li>
-      <li><a href="#skills" class="nav__link">Skills</a></li>
-      <li><a href="#projects" class="nav__link">Projects</a></li>
-      <li><a href="#journey" class="nav__link">Journey</a></li>
-      <li><a href="#contact" class="nav__link">Contact</a></li>
-    </ul>
-
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero__container">
-      <!-- Left Column -->
-      <div class="hero__left">
-        <div class="badge" id="badge">
-          <span class="badge__dot"></span>
-          AVAILABLE FOR OPPORTUNITIES
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-text">ARJUN</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loading-bar-fill"></div>
         </div>
-        <h2 class="hero__small-title" id="small-title">Hi, I’m</h2>
-        <h1 class="hero__title" id="hero-title">Arjun</h1>
-        <p class="hero__subtitle" id="subtitle">
-          AI and Data Science Student <span class="sep">|</span> Cloud and DevOps Engineer <span class="sep">|</span> AI Enthusiast
-        </p>
-        <p class="hero__desc" id="description">
-          I build scalable web applications and create immersive digital experiences. I enjoy solving problems, learning new technologies and turning ideas into elegant products.
-        </p>
-        <div class="hero__buttons">
-          <a href="#projects" class="btn btn--primary" id="btn-projects">View Projects</a>
-          <a href="/assets/resume.pdf" class="btn btn--outline" id="btn-resume" download>Download Resume</a>
-        </div>
-        <div class="hero__stats" id="stats">
-          <div class="stat">
-            <span class="stat__value">2+</span>
-            <span class="stat__label">Years Learning</span>
-          </div>
-          <div class="divider"></div>
-          <div class="stat">
-            <span class="stat__value">10+</span>
-            <span class="stat__label">Projects Built</span>
-          </div>
-          <div class="divider"></div>
-          <div class="stat">
-            <span class="stat__value">5+</span>
-            <span class="stat__label">Technologies</span>
-          </div>
-          <div class="divider"></div>
-          <div class="stat">
-            <span class="stat__value">∞</span>
-            <span class="stat__label">Curiosity</span>
-          </div>
-        </div>
-        <div class="hero__social" id="social-icons">
-          <a href="https://github.com/your-username" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/your-username" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/your-username" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="mailto:your@email.com" class="social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-      <!-- Right Column -->
-      <div class="hero__right" id="hero-illustration">
-        <div class="hero__image-wrapper">
-          <img src="assets/images/Image1.png" alt="Arjun" class="hero__photo" />
-          <div class="hero__photo-glow"></div>
-        </div>
-      </div>
     </div>
 
-    <!-- Cinematic transition overlays -->
-    <div class="sunset-flood" id="sunset-flood"></div>
-    <div class="orange-flood" id="orange-flood"></div>
-    <div class="black-flood" id="black-flood"></div>
-  </section>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="about__container">
-      <span class="section-label">About Me</span>
-      <h2 class="about__headline">
-        Crafting Digital Experiences<br/>with Code &amp; Curiosity
-      </h2>
-      <div class="about__content">
-        <div class="about__text-block">
-          <p class="about__text">
-            I'm Arjun — an AI and Data Science student with a deep passion for building things that live on the internet. I specialise in crafting scalable web applications, exploring the frontiers of machine learning, and turning complex ideas into elegant, user-centric products.
-          </p>
-          <p class="about__text">
-            My journey started with curiosity and a terminal window. Today, it spans cloud architecture, DevOps pipelines, deep learning models, and full-stack applications. I believe the best software is built at the intersection of engineering precision and creative intuition.
-          </p>
-          <p class="about__text">
-            When I'm not coding, you'll find me experimenting with generative AI, contributing to open-source projects, or diving deep into research papers that push the boundaries of what's possible.
-          </p>
+    <!-- Fixed Navigation -->
+    <nav class="nav-bar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand interactive-element">ARJUN</a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="interactive-element active" data-section="hero">About</a></li>
+                <li><a href="#skills" class="interactive-element" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="interactive-element" data-section="projects">Projects</a></li>
+                <li><a href="#journey" class="interactive-element" data-section="journey">Journey</a></li>
+                <li><a href="#about" class="interactive-element" data-section="about">Behind</a></li>
+                <li><a href="#contact" class="interactive-element" data-section="contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta interactive-element">Let's Talk</a>
+            <button class="mobile-menu-btn interactive-element" aria-label="Menu">
+                <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+            </button>
         </div>
-        <div class="about__highlights">
-          <div class="about__highlight-card">
-            <span class="about__highlight-icon">🧠</span>
-            <h4 class="about__highlight-title">AI & ML</h4>
-            <p class="about__highlight-desc">Deep learning, NLP, and computer vision projects that solve real problems.</p>
-          </div>
-          <div class="about__highlight-card">
-            <span class="about__highlight-icon">☁️</span>
-            <h4 class="about__highlight-title">Cloud & DevOps</h4>
-            <p class="about__highlight-desc">Architecting scalable infrastructure with CI/CD, Docker, and cloud platforms.</p>
-          </div>
-          <div class="about__highlight-card">
-            <span class="about__highlight-icon">🎨</span>
-            <h4 class="about__highlight-title">Design Craft</h4>
-            <p class="about__highlight-desc">Pixel-perfect interfaces with cinematic animations and premium aesthetics.</p>
-          </div>
-        </div>
-      </div>
+    </nav>
+
+    <!-- Page Sections -->
+    <div id="hero" style="scroll-margin-top: 72px;">
+        <iframe src="screens/hero-centered.html" class="section-frame" id="frame-hero" title="Hero Section"></iframe>
     </div>
-  </section>
 
-  <div class="particles"></div>
-<script type="module" src="js/script.js"></script>
+    <div class="section-divider"></div>
+
+    <div id="skills" style="scroll-margin-top: 72px;">
+        <iframe src="screens/the-craft.html" class="section-frame" id="frame-skills" title="Skills Section"></iframe>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div id="projects" style="scroll-margin-top: 72px;">
+        <iframe src="screens/creations.html" class="section-frame" id="frame-projects" title="Projects Section"></iframe>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div id="journey" style="scroll-margin-top: 72px;">
+        <iframe src="screens/the-path.html" class="section-frame" id="frame-journey" title="Journey Section"></iframe>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div id="about" style="scroll-margin-top: 72px;">
+        <iframe src="screens/behind-the-code.html" class="section-frame" id="frame-about" title="About Section"></iframe>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div id="contact" style="scroll-margin-top: 72px;">
+        <iframe src="screens/the-connection.html" class="section-frame" id="frame-contact" title="Contact Section"></iframe>
+    </div>
+
+    <script>
+        // ============================================================
+        // AUTO-RESIZE IFRAMES TO FIT CONTENT
+        // ============================================================
+        function resizeIframe(iframe) {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                if (doc && doc.body) {
+                    const height = Math.max(
+                        doc.body.scrollHeight,
+                        doc.documentElement.scrollHeight,
+                        doc.body.offsetHeight,
+                        doc.documentElement.offsetHeight
+                    );
+                    iframe.style.height = height + 'px';
+                    iframe.style.minHeight = '0';
+                }
+            } catch (e) {
+                // Cross-origin fallback — keep min-height
+            }
+        }
+
+        const iframes = document.querySelectorAll('.section-frame');
+        let loadedCount = 0;
+        const totalFrames = iframes.length;
+        const loadingBar = document.getElementById('loading-bar-fill');
+        const loadingOverlay = document.getElementById('loading-overlay');
+
+        iframes.forEach(iframe => {
+            iframe.addEventListener('load', () => {
+                resizeIframe(iframe);
+                loadedCount++;
+                const pct = Math.round((loadedCount / totalFrames) * 100);
+                loadingBar.style.width = pct + '%';
+
+                if (loadedCount >= totalFrames) {
+                    setTimeout(() => {
+                        loadingOverlay.classList.add('fade-out');
+                        setTimeout(() => loadingOverlay.remove(), 800);
+                    }, 400);
+                }
+
+                // Re-check sizing after images load inside iframe
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    const imgs = iframeDoc.querySelectorAll('img');
+                    imgs.forEach(img => {
+                        if (!img.complete) {
+                            img.addEventListener('load', () => resizeIframe(iframe));
+                        }
+                    });
+                } catch(e) {}
+            });
+        });
+
+        // Periodic resize check for dynamic content (Three.js, etc.)
+        setInterval(() => {
+            iframes.forEach(resizeIframe);
+        }, 2000);
+
+        window.addEventListener('resize', () => {
+            iframes.forEach(resizeIframe);
+        });
+
+        // ============================================================
+        // CUSTOM CURSOR
+        // ============================================================
+        const cursor = document.getElementById('custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mouseover', (e) => {
+            if (e.target.closest('.interactive-element, a, button')) {
+                cursor.classList.add('hovering');
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.target.closest('.interactive-element, a, button')) {
+                cursor.classList.remove('hovering');
+            }
+        });
+
+        // ============================================================
+        // ACTIVE NAV LINK ON SCROLL
+        // ============================================================
+        const sections = document.querySelectorAll('[id]');
+        const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.dataset.section === id);
+                    });
+                }
+            });
+        }, {
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0
+        });
+
+        sections.forEach(section => {
+            if (section.querySelector('.section-frame')) {
+                navObserver.observe(section);
+            }
+        });
+
+        // ============================================================
+        // HIDE/SHOW NAV ON SCROLL
+        // ============================================================
+        let lastScrollY = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+
+        // ============================================================
+        // SMOOTH SCROLL FOR NAV LINKS
+        // ============================================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

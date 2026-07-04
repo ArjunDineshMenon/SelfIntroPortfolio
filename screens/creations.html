@@ -1,0 +1,430 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Creations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400&amp;family=Playfair+Display:wght@600;700;800;900&amp;family=Space+Mono:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-surface": "#e5e2e1",
+                            "secondary-fixed-dim": "#ffb77d",
+                            "primary-fixed": "#ffdbd1",
+                            "on-tertiary-container": "#2a2a2a",
+                            "on-primary-container": "#541100",
+                            "inverse-primary": "#b12d00",
+                            "surface-tint": "#ffb5a0",
+                            "error": "#ffb4ab",
+                            "tertiary-fixed": "#e5e2e1",
+                            "surface": "#131313",
+                            "primary-container": "#ff5625",
+                            "on-error-container": "#ffdad6",
+                            "outline": "#ad887e",
+                            "on-tertiary-fixed-variant": "#474746",
+                            "on-surface-variant": "#e7bdb2",
+                            "inverse-on-surface": "#313030",
+                            "surface-container-lowest": "#0e0e0e",
+                            "surface-container-low": "#1c1b1b",
+                            "on-tertiary": "#313030",
+                            "primary-fixed-dim": "#ffb5a0",
+                            "surface-dim": "#131313",
+                            "on-secondary-fixed-variant": "#6e3900",
+                            "on-secondary-fixed": "#2f1500",
+                            "surface-bright": "#3a3939",
+                            "surface-container-high": "#2a2a2a",
+                            "surface-variant": "#353534",
+                            "primary": "#ffb5a0",
+                            "on-background": "#e5e2e1",
+                            "tertiary-container": "#929090",
+                            "surface-container-highest": "#353534",
+                            "inverse-surface": "#e5e2e1",
+                            "tertiary-fixed-dim": "#c8c6c5",
+                            "outline-variant": "#5d4038",
+                            "secondary-fixed": "#ffdcc3",
+                            "on-secondary": "#4d2600",
+                            "secondary": "#ffb77d",
+                            "on-tertiary-fixed": "#1c1b1b",
+                            "error-container": "#93000a",
+                            "tertiary": "#c8c6c5",
+                            "on-primary-fixed-variant": "#872000",
+                            "on-primary": "#601400",
+                            "on-error": "#690005",
+                            "surface-container": "#201f1f",
+                            "background": "#131313",
+                            "secondary-container": "#fd8b00",
+                            "on-primary-fixed": "#3b0900",
+                            "on-secondary-container": "#603100"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "container-max": "1440px",
+                            "margin-edge": "64px",
+                            "section-gap": "160px",
+                            "gutter": "32px",
+                            "stack-sm": "8px",
+                            "stack-md": "24px",
+                            "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                            "label-mono": [
+                                    "Space Mono"
+                            ],
+                            "body-md": [
+                                    "Hanken Grotesk"
+                            ],
+                            "display-xl-mobile": [
+                                    "Playfair Display"
+                            ],
+                            "body-lg": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-md": [
+                                    "Playfair Display"
+                            ],
+                            "display-lg": [
+                                    "Playfair Display"
+                            ],
+                            "headline-sm": [
+                                    "Playfair Display"
+                            ],
+                            "display-lg-mobile": [
+                                    "Playfair Display"
+                            ],
+                            "display-xl": [
+                                    "Playfair Display"
+                            ]
+                    },
+                    "fontSize": {
+                            "label-mono": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "100%",
+                                            "letterSpacing": "0.1em",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "160%",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "display-xl-mobile": [
+                                    "56px",
+                                    {
+                                            "lineHeight": "110%",
+                                            "fontWeight": "900"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "20px",
+                                    {
+                                            "lineHeight": "160%",
+                                            "letterSpacing": "0.01em",
+                                            "fontWeight": "300"
+                                    }
+                            ],
+                            "headline-md": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "120%",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "display-lg": [
+                                    "80px",
+                                    {
+                                            "lineHeight": "100%",
+                                            "letterSpacing": "-0.03em",
+                                            "fontWeight": "800"
+                                    }
+                            ],
+                            "headline-sm": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "130%",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "display-lg-mobile": [
+                                    "40px",
+                                    {
+                                            "lineHeight": "110%",
+                                            "fontWeight": "800"
+                                    }
+                            ],
+                            "display-xl": [
+                                    "120px",
+                                    {
+                                            "lineHeight": "110%",
+                                            "letterSpacing": "-0.04em",
+                                            "fontWeight": "900"
+                                    }
+                            ]
+                    }
+            },
+                },
+        }
+    </script>
+<style>
+        body {
+            background-color: #080808; /* The Void */
+            color: #e5e2e1;
+            cursor: none;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ffb5a0;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border 0.3s;
+        }
+
+        .cursor-hover {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid #ffb5a0;
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(255, 86, 37, 0.05) 0%, rgba(8, 8, 8, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(100px);
+        }
+
+        /* 3D Tilt Card */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s;
+            border: 1px solid rgba(255, 181, 160, 0.1);
+            background: rgba(26, 26, 26, 0.6); /* Slightly lighter grey with transparency */
+            backdrop-filter: blur(12px);
+        }
+
+        .tilt-card:hover {
+            border-color: rgba(255, 181, 160, 0.3);
+            box-shadow: 0 0 30px rgba(255, 86, 37, 0.15);
+            /* Transform is handled by JS for dynamic tilt */
+        }
+        
+        .tilt-card-content {
+            transform: translateZ(30px);
+        }
+
+        /* Ghost Button */
+        .btn-ghost {
+            border: 1px solid #ffb5a0;
+            color: #ffb5a0;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-ghost:hover {
+            background: #ffb5a0;
+            color: #080808;
+        }
+
+        /* Input */
+        .input-minimal {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(229, 226, 225, 0.2);
+            border-radius: 0;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .input-minimal:focus {
+            outline: none;
+            border-bottom-color: #ffb77d;
+            box-shadow: 0 1px 10px rgba(255, 183, 125, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-primary-container selection:text-black">
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursor" style="left: 909px; top: 1737px;"></div>
+<!-- Background Ambient Glow -->
+<div class="ambient-glow"></div>
+<!-- Top Navigation (From JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-5 md:px-margin-edge py-8 max-w-container-max mx-auto">
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-primary interactive-element" href="#">ARJUN</a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex items-center gap-stack-lg">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500 interactive-element" href="#">About</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500 interactive-element" href="#">Skills</a></li>
+<li class=""><a class="font-body-md text-body-md text-primary font-bold border-b border-primary/30 pb-1 interactive-element" href="#">Projects</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500 interactive-element" href="#">Journey</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-500 interactive-element" href="#">Contact</a></li>
+<li class="">
+<a class="btn-ghost font-body-md text-body-md px-6 py-2 ml-4 interactive-element" href="#">Hire Me</a>
+</li>
+</ul>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary interactive-element">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative z-10 pt-32 pb-section-gap px-5 md:px-margin-edge max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mt-section-gap mb-section-gap">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary text-left">CREATIONS</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-stack-md text-left">A curated gallery of engineering artifacts born from the void. Merging raw performance with high-end aesthetic.</p>
+</header>
+<!-- Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-section-gap gap-x-gutter">
+<!-- Project 1: AI Resume Analyzer (Asymmetric Large) -->
+<article class="col-span-1 md:col-span-10 md:col-start-2 tilt-card rounded-xl overflow-hidden interactive-element" data-tilt="" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg);">
+<div class="flex flex-col md:flex-row h-full">
+<div class="w-full md:w-3/5 h-80 md:h-[600px] relative overflow-hidden group">
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<img alt="Project Visual" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGzwl7KjFoa5jYNHIp1sxzOxYk2lr4EqMMLw_lVMUkVyFoqjaWQVi0N2GTDoTMKmRsJ6Ky7_6A-T_E9bogYXDLfKEhEfiW1_opkgea6eNFb4NfzxgVpluDltA5GcmH9KOMxkbxJqXWuYKLtKsUEBZgqpmpS8NNdXNZhrOZRgLD7I2N3qVGfmennZbQXQz-sVhNbzx42mqOhLlrxSAIi7xvs5jn1OWbNRAx6BiiP-IL7O0KHxuvPmpf9g">
+</div>
+<div class="w-full md:w-2/5 p-stack-lg md:p-margin-edge flex flex-col justify-center tilt-card-content bg-surface/50">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">SysCtrl</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">A powerful system monitoring and optimization suite designed to track performance, manage temperatures, and unlock hardware potential through precise overclocking controls.</p>
+<div class="flex flex-wrap gap-stack-sm mb-stack-lg"><span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">C++</span><span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">System APIs</span><span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">Low Level</span></div>
+<div class="flex gap-stack-sm">
+<a class="btn-ghost font-body-md text-body-md px-6 py-3 rounded interactive-element flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">code</span> Code
+                            </a>
+<a class="btn-ghost font-body-md text-body-md px-6 py-3 rounded interactive-element flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">open_in_new</span> Live
+                            </a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: Personal Portfolio (Asymmetric Right Aligned) -->
+<article class="col-span-1 md:col-span-8 md:col-start-5 tilt-card rounded-xl overflow-hidden interactive-element" data-tilt="" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg);">
+<div class="flex flex-col md:flex-row-reverse h-full">
+<div class="w-full md:w-1/2 h-64 md:h-[500px] relative overflow-hidden group">
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A dark, minimalist digital workspace showing clean, glowing lines of code on a modern monitor. The environment is extremely sparse, lit only by the warm, high-contrast orange glow from the screen reflecting on a sleek black desk surface. High-end cinematic aesthetic, awwwards style UI elements faintly visible in the background." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB2kw0j3gvPYioAmA-lCHcQY2ZMg4VzIffP4WoKpNkxwptg4v-qc9_kEaaKVT__WaBKNf6T8rNe1mECfSdcdHm4pF4uidPDIqC47jN06lbTJdcfbdhJBorcQn5uRCqS0Ul4FdCDEhforfTOpFkU7g3ziSzRfAbck2IVgr2SS9LPFjDL5UfzmVrQ7XbsjAg40oOqZxCv-6ZnF1q9M6T0pw6D2bbJf3nteh_7TotdKkp7yX8BwojFQ0SxAQ&quot;);"></div>
+</div>
+<div class="w-full md:w-1/2 p-stack-lg flex flex-col justify-center tilt-card-content bg-surface/50">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">The Void Portfolio</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">A cinematic exploration of digital identity. Utilizing WebGL shaders and custom fluid animations to create an immersive, gallery-like experience for showcasing technical architecture.</p>
+<div class="flex flex-wrap gap-stack-sm mb-stack-lg">
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">Next.js</span>
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">Three.js</span>
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">Tailwind</span>
+</div>
+<div class="flex gap-stack-sm">
+<a class="btn-ghost font-body-md text-body-md px-6 py-2 rounded interactive-element flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">code</span> Source
+                            </a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 3: Cloud File Storage (Asymmetric Left Aligned) -->
+<article class="col-span-1 md:col-span-8 md:col-start-1 tilt-card rounded-xl overflow-hidden interactive-element" data-tilt="">
+<div class="flex flex-col md:flex-row h-full">
+<div class="w-full md:w-1/2 h-64 md:h-[500px] relative overflow-hidden group">
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="An abstract 3D rendering representing cloud data storage. Floating geometric cubes in deep matte black arranged in a precise grid, interconnected by thin, glowing, vibrant orange laser-like lines. The background is a vast, pitch-black void with a subtle gradient light source emanating from below. High-end, sophisticated tech visualization." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCZRQ6-7HRiiHxjauBgd9RxwmtaejQ8LkEjGUcd9ZQfbR3VGM6lYEEAT5ANf-YQ6zejxqCbcj4eod41AKpEWRbRiq9K7a5A6-8AzXVjOcrEtuCZ3zLY1_WW1S1BLk7yaiOovuOYkBZtHGrTDAhO6cCx3jRoozXGi5Oa8DAQ46I3cawPf5FYNx-qlx3SJKXQ0ERWO8afczIDo4zdgfvoF2_kOYulJn55Ac8Fg_RPJ01_A1qurCZakLNR3g&quot;);"></div>
+</div>
+<div class="w-full md:w-1/2 p-stack-lg flex flex-col justify-center tilt-card-content bg-surface/50">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-sm">Nebula Storage Node</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">A decentralized, end-to-end encrypted file storage architecture. Designed for uncompromising security and seamless global access across distributed networks.</p>
+<div class="flex flex-wrap gap-stack-sm mb-stack-lg">
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">Rust</span>
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">AWS S3</span>
+<span class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 rounded text-on-surface-variant">GraphQL</span>
+</div>
+<div class="flex gap-stack-sm">
+<a class="btn-ghost font-body-md text-body-md px-6 py-2 rounded interactive-element flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">description</span> Docs
+                            </a>
+<a class="btn-ghost font-body-md text-body-md px-6 py-2 rounded interactive-element flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">rocket_launch</span> Launch
+                            </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer (From JSON) -->
+<footer class="w-full py-stack-lg border-t border-outline-variant/10 bg-background relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-5 md:px-margin-edge w-full max-w-container-max mx-auto">
+<span class="font-display-lg-mobile md:font-display-lg text-primary text-display-lg-mobile md:text-display-lg mb-4 md:mb-0">ARJUN</span>
+<p class="font-label-mono text-label-mono text-on-surface-variant mb-4 md:mb-0">© 2024 ARJUN. BUILT IN THE VOID.</p>
+<ul class="flex gap-stack-md">
+<li class=""><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary hover:tracking-widest transition-all duration-700 interactive-element" href="#">Github</a></li>
+<li class=""><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary hover:tracking-widest transition-all duration-700 interactive-element" href="#">LinkedIn</a></li>
+<li class=""><a class="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary hover:tracking-widest transition-all duration-700 interactive-element" href="#">Twitter</a></li>
+</ul>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const interactiveElements = document.querySelectorAll('.interactive-element, a, button, input');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        });
+
+        // 3D Tilt Effect for Cards
+        const tiltCards = document.querySelectorAll('[data-tilt]');
+
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x position within the element.
+                const y = e.clientY - rect.top;  // y position within the element.
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -5; // Max rotation 5deg
+                const rotateY = ((x - centerX) / centerX) * 5;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+            });
+        });
+    </script>
+
+
+</body></html>
+
